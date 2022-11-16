@@ -8,7 +8,7 @@ a:hover{text-decoration:none;}
 
 .wrapper{
     min-height: 100%;
-    min-width: 800px;
+    min-width: 1300px;
     display: flex;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
@@ -20,7 +20,7 @@ a:hover{text-decoration:none;}
 
 .header{
     padding: 30px 0px;
-    background-color: #445162;
+    background-color: 	#007C21;
 }
 
 .container{
@@ -53,9 +53,20 @@ a:hover{text-decoration:none;}
     font-size: 46px;
 }
 
+.header__list ul{
+    perspective-origin: center;
+    perspective: 400px;
+}
+
 .header__list li{
     list-style: none;
     line-height: 40px;
+    transition-duration: 0.2s;
+}
+
+.header__list li:hover{
+    transform: translate3d(-10px, -5px, 30px);
+    text-shadow: 0px 0px 20px black;
 }
 
 .header__list li::before{
@@ -70,7 +81,7 @@ a:hover{text-decoration:none;}
 .header__title{
     align-self: center;
     position: relative;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .header__title::before{
@@ -79,7 +90,7 @@ a:hover{text-decoration:none;}
     top: 0;
     background-color: white;
     height: 2px;
-    width: 120px;
+    width: 50%;
     left: 22%;
     margin: 55px 0px 0px 0px;
     transition-duration: 0.5s;
@@ -90,21 +101,19 @@ a:hover{text-decoration:none;}
     position: absolute;
     background-color: white;
     height: 2px;
-    width: 120px;
-    left: 22%;
+    width: 50%;
     margin: -10px 0px 0px 0px;
     transition-duration: 0.5s;
+    left: 22%;
 }
 
 .header__title:hover::after {
-    left: 0;
-    width: 230px;
+    transform: scaleX(2);
     box-shadow: 0px 0px 10px red;
 }
 
 .header__title:hover::before {
-    left: 0;
-    width: 230px;
+    transform: scaleX(2);
     box-shadow: 0px 0px 10px blue;
 }
 
@@ -120,20 +129,23 @@ a:hover{text-decoration:none;}
     display: flex;
 }
 
+.what__image {
+    perspective-origin: center;
+    perspective: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+    flex: 0 0 250px;
+}
+
 .what__image img{
     width: 250px;
-    border: 3px solid #445161;
+    border: 3px solid #007C21;
     box-shadow: 0px 0px 20px black;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
-.what__image img:hover{
-    width: 260px;
+.what__image:hover img{
+    transform: translate3d(20px, -20px, 50px) rotate3d(1, 1, 1, 25deg);
     box-shadow: 0px 0px 30px blue;
-}
-
-.what__image {
-    flex: 0 0 250px;
 }
 
 .what__body {
@@ -142,7 +154,7 @@ a:hover{text-decoration:none;}
 }
 
 .what__title{
-    color: #445161;
+    color: #007C21;
     margin: 0px 0px 26px 0px;
     font-size: 26px;
 }
@@ -160,7 +172,7 @@ a:hover{text-decoration:none;}
 }
 
 .columns__title {
-    color: #445161;
+    color: #007C21;
     letter-spacing: 4px;
     margin: 0px 0px 40px 0px;
 }
@@ -183,6 +195,20 @@ a:hover{text-decoration:none;}
 
 .item__image{
     flex: 0 0 200px;
+    perspective-origin: center;
+    perspective: 300px;
+}
+
+.item__image img {
+    width: 200px;
+    height: 200px;
+    transition-duration: 0.2s;
+}
+
+.item__image img:hover{
+    transform: translate3d(0,0, 30px);
+    border: 2px solid black;
+    box-shadow: 0 0 20px green;
 }
 
 .item__body{
@@ -190,7 +216,7 @@ a:hover{text-decoration:none;}
 }
 
 .item__title {
-    color: #445161;
+    color: #007C21;
     font-size: 24px;
     margin: 0px 0px 14px 0px;
 }
@@ -207,7 +233,7 @@ a:hover{text-decoration:none;}
 }
 
 .vertical__title {
-    color: #445161;
+    color: #007C21;
     margin: 0px 0px 30px 0px;
 }
 
@@ -230,10 +256,10 @@ a:hover{text-decoration:none;}
 .vertical__item{
     display: flex;
     flex-direction: column;
-    background-color: #445162;
+    background-color: #007C21;
     border-radius: 5px;
     color: white;
-    border: 1px solid #445162;
+    border: 1px solid #007C21;
 }
 
 .vertical__text {
@@ -265,7 +291,7 @@ a:hover{text-decoration:none;}
     padding: 15px 0;
     text-transform: uppercase;
     background-color: white;
-    color: #445162;;
+    color: #007C21;
 }
 
 .vertical__button{
@@ -275,22 +301,20 @@ a:hover{text-decoration:none;}
     line-height: 40px;
     border-radius: 5px;
     margin: 15px;
-    color: #445161;
+    color: #007C21;
     background-color: white;
     border: 1px solid black;
     transition-duration: 0.2s;
-    position: relative;
-    bottom: 0px;
 }
 
 .vertical__button:hover{
-    bottom: 3px;
+    transform: translateY(-5px);
     box-shadow: 0px 5px 5px black;
 }
 
 .footer{
     padding: 30px;
-    background-color: #445162;
+    background-color: #007C21;
 }
 
 .footer__row{
